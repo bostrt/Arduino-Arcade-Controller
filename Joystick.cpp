@@ -6,14 +6,13 @@
  */
 #include <stdlib.h>
 #include "Joystick.h"
-#include "JoystickDirection.h"
-#include <assert.h>
+#include "Button.h"
 
 Joystick::Joystick() {
 
 }
 
-bool Joystick::addDirection(int index, JoystickDirection* dir) {
+bool Joystick::addDirection(int index, Button* dir) {
 	if(index >= 0 && index < STICK_DIRECTION_COUNT){
 		directions[index] = dir;
 		return true;
@@ -21,7 +20,7 @@ bool Joystick::addDirection(int index, JoystickDirection* dir) {
 	return false;
 }
 
-JoystickDirection* Joystick::getJoystickDirection(int index) {
+Button* Joystick::getJoystickDirection(int index) {
 	if(index >= 0 && index < STICK_DIRECTION_COUNT){
 		return directions[index];
 	}

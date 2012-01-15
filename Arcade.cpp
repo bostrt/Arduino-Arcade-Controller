@@ -2,7 +2,6 @@
 #include "Arcade.h"
 #include "Button.h"
 #include "ButtonPad.h"
-#include "JoystickDirection.h"
 #include "Joystick.h"
 #include "SoftwareSerial.h"
 
@@ -16,10 +15,10 @@ void setup()
 	serial.begin(9600);
 
 	// Add Up, Down, Left, and Right to the joystick obj.
-	stick->addDirection(0, new JoystickDirection(STICK_UP_PIN, UP));
-	stick->addDirection(1, new JoystickDirection(STICK_DOWN_PIN, DOWN));
-	stick->addDirection(2, new JoystickDirection(STICK_LEFT_PIN, LEFT));
-	stick->addDirection(3, new JoystickDirection(STICK_RIGHT_PIN, RIGHT));
+	stick->addDirection(0, new Button('i',STICK_UP_PIN));
+	stick->addDirection(1, new Button('k',STICK_DOWN_PIN));
+	stick->addDirection(2, new Button('j',STICK_LEFT_PIN));
+	stick->addDirection(3, new Button('l',STICK_RIGHT_PIN));
 
 	// Add Buttons 1-8
 	pad->addButton(new Button('s', BUTTON_START_PIN));

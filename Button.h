@@ -3,6 +3,10 @@
  *
  *  Created on: Jan 14, 2012
  *      Author: robert
+ *
+ *	Button represents a switch in the arcade controller system.
+ *	A button is assigned a pin on the Arduino and assigned a
+ *	character that it sends when triggered.
  */
 
 #ifndef BUTTON_H_
@@ -15,8 +19,8 @@ private:
 public:
 	Button();
 	Button(char button, int pin);
-	char getButtonCharacter();
-	void setButtonCharacter(char);
+	char getCharacter();
+	void setCharacter(char);
 	int getPinNumber();
 	void setPinNumber(int);
 };

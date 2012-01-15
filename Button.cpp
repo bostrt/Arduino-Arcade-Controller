@@ -8,12 +8,12 @@
 #include "Arduino.h"
 
 Button::Button(char button, int pin) {
-	setButtonCharacter(button);
+	setCharacter(button);
 	setPinNumber(pin);
 	pinMode(pin, INPUT);
 }
 
-void Button::setButtonCharacter(char button) {
+void Button::setCharacter(char button) {
 	buttonCharacter = button;
 }
 
@@ -21,7 +21,7 @@ void Button::setPinNumber(int pin) {
 	pinNumber = pin;
 }
 
-char Button::getButtonCharacter() {
+char Button::getCharacter() {
 	return buttonCharacter;
 }
 

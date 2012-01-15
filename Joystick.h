@@ -7,17 +7,17 @@
 #ifndef JOYSTICK_H_
 #define JOYSTICK_H_
 
-#include "JoystickDirection.h"
+#include "Button.h"
 
 #define STICK_DIRECTION_COUNT 4
 
 class Joystick {
 private:
-	JoystickDirection* directions[STICK_DIRECTION_COUNT];
+	Button* directions[STICK_DIRECTION_COUNT];
 public:
 	Joystick();
-	bool addDirection(int index, JoystickDirection* direction);
-	JoystickDirection* getJoystickDirection(int direction);
+	bool addDirection(int index, Button* direction);
+	Button* getJoystickDirection(int direction);
 };
 
 #endif /* JOYSTICK_H_ */
