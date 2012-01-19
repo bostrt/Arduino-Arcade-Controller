@@ -33,6 +33,20 @@ void setup()
 
 void loop()
 {
-
+	Button *b;
+	bool oneWasTriggered = false;
+	for(int i = 0; i < STICK_DIRECTION_COUNT; i++) {
+		b = stick->getJoystickDirection(i);
+		pinMode(b->getPinNumber(), INPUT);
+		if(digitalRead(b->getPinNumber()) == HIGH) {
+			serial.print(b->getCharacter());
+			oneWasTriggered = true;
+		}
+	}
+	if(oneWasTriggered){
+		serial.println(' ');
+	}
+	serial.flush();
+	delay(20);
 }
 

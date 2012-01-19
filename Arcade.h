@@ -20,10 +20,10 @@ void setup();
 
 //add your function definitions for the project Arcade here
 // Stick Direction-Pin mapping
-#define STICK_UP_PIN 10
-#define STICK_DOWN_PIN 11
-#define STICK_LEFT_PIN 12
-#define STICK_RIGHT_PIN 13
+#define STICK_UP_PIN 7
+#define STICK_DOWN_PIN 8
+#define STICK_LEFT_PIN 11
+#define STICK_RIGHT_PIN 12
 
 // Button-Pin mapping
 #define BUTTON_START_PIN 2
